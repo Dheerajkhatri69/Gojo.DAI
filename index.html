@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="DAI.css">
+    <link rel="shortcut icon" href="pngs/Gojo-PNG-Picture.png" type="image/x-icon">
+    
+    <title>DAI</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <div>GOJO</div>
+            <div class="point">DAI</div>
+        </div>
+        <div class="manue">
+            <ion-icon name="menu-outline" class="open" id="close"></ion-icon>
+            <ion-icon name="close-outline" class="close" id="open"></ion-icon>
+        </div>
+        <nav>
+            <ul id="bar">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contect</a></li>
+            </ul>
+        </nav>
+
+        <div class="field-group">
+            <input type="text" name="search" id="search" calss="input-field" placeholder="Search" autocomplete="off">
+        </div>
+    </header>
+
+    <!-- BACKGROUND-->
+    <div class="absolute inset-0 justify-center">
+        <div class="bg-shape1 bg-teal opactity-50 bg-blur"></div>
+        <div class="bg-shape2 bg-primary opactity-50 bg-blur"></div>
+        <div class="bg-shape1 bg-purple opactity-50 bg-blur"></div>
+    </div>
+    <!-- BACKGROUND-->
+
+
+    <div class="center">
+        <div class="massege">
+            <h3><span class="multitext"></span></h3>
+        </div>
+        <div><img src="pngs/gojo.png" alt="Error"></div>
+        <h1>Personal AI Chat Bot</h1>
+        <div class="dis">
+            <div>✅Cost-effective</div>
+            <div>✅24/7 Availability</div>
+            <div>✅Flexibility</div>
+        </div>
+    </div>
+
+
+    <div class="chat-bhot">
+        <div class="head">
+            <p>How can I help you?</p>
+            <p>Download link's</p>
+        </div>
+        <div class="chat-box">
+            <ul>
+                <li id="click1"><ion-icon name="chevron-forward-outline"></ion-icon>OOP</li>
+                <ul id="data1">
+                    <li><a href="">hello</a></li>
+                    <li><a href="">hi</a></li>
+                    <li><a href="">salam</a></li>
+                </ul>
+                <li id="click2"><ion-icon name="chevron-forward-outline"></ion-icon>English</li>
+                <ul id="data2">
+                    <li><a href="">hello 2</a></li>
+                    <li><a href="">hi 2</a></li>
+                    <li><a href="">salam 2</a></li>
+                    <li><a href="">salam 2</a></li>
+                    <li><a href="">salam 2</a></li>
+                </ul>
+                <li id="click3"><ion-icon name="chevron-forward-outline"></ion-icon>Urdu</li>
+                <ul id="data3">
+                    <li><a href="">hello 3</a></li>
+                    <li><a href="">hi 3</a></li>
+                    <li><a href="">salam 3</a></li>
+                    <li><a href="">salam 3</a></li>
+                    <li><a href="">salam 3</a></li>
+                </ul>
+                <li id="click4"><ion-icon name="chevron-forward-outline"></ion-icon>Arabic</li>
+                <ul id="data4">
+                    <li><a href="">hello 4</a></li>
+                    <li><a href="">hi 4</a></li>
+                    <li><a href="">hi 4</a></li>
+                    <li><a href="">hi 4</a></li>
+                    <li><a href="">hi 4</a></li>
+                    <li><a href="">salam 4</a></li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+    <!-- open bar -->
+    <script>
+        var open = document.getElementById("open");
+        var close = document.getElementById("close");
+        var bar = document.getElementById("bar");
+        open.onclick = function () {
+            bar.classList.toggle("add");
+            open.style.display = "none"
+            close.style.display = "block"
+        }
+        close.onclick = function () {
+            bar.classList.toggle("add");
+            open.style.display = "block"
+            close.style.display = "none"
+        }
+    </script>
+
+
+    <!-- open bar -->
+    <!-- click funtion -->
+    <script>
+        var click1 = document.getElementById("click1");
+        var data1 = document.getElementById("data1");
+        click1.onclick = function(){
+            if(data1.style.display != "block"){
+                data1.style.display = "block"
+            }else{
+                data1.style.display = "none"
+            }
+        }
+        var click2 = document.getElementById("click2");
+        var data2 = document.getElementById("data2");
+        click2.onclick = function(){
+            if(data2.style.display != "block"){
+                data2.style.display = "block"
+            }else{
+                data2.style.display = "none"
+            }
+        }
+        var click3 = document.getElementById("click3");
+        var data3 = document.getElementById("data3");
+        click3.onclick = function(){
+            if(data3.style.display != "block"){
+                data3.style.display = "block"
+            }else{
+                data3.style.display = "none"
+            }
+        }
+        var click4 = document.getElementById("click4");
+        var data4 = document.getElementById("data4");
+        click4.onclick = function(){
+            if(data4.style.display != "block"){
+                data4.style.display = "block"
+            }else{
+                data4.style.display = "none"
+            }
+        }
+    </script>
+    <!-- click funtion -->
+    <!-- Chat bot -->
+    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+    <script>
+        window.botpressWebChat.init({
+            "composerPlaceholder": "Chat with Dheeraj",
+            "botConversationDescription": "online",
+            "botId": "ee2a695a-2c4b-4252-b6ee-38abd31d6c38",
+            "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+            "messagingUrl": "https://messaging.botpress.cloud",
+            "clientId": "ee2a695a-2c4b-4252-b6ee-38abd31d6c38",
+            "webhookId": "78ecc9db-2e6e-4212-b741-eabd4aba5f9a",
+            "lazySocket": true,
+            "themeName": "prism",
+            "botName": "Dheeraj",
+            "avatarUrl": "https://i.imgur.com/GShngNi.png",
+            "stylesheet": "https://webchat-styler-css.botpress.app/prod/d5f124a0-03f0-4c2c-b7ea-0790506f90f7/v44879/style.css",
+            "frontendVersion": "v1",
+            "useSessionStorage": true,
+            "enableConversationDeletion": true,
+            "theme": "prism",
+            "themeColor": "#2563eb"
+        });
+    </script>
+    <!-- Chat bot -->
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <script>
+        var typingEffect = new Typed(".multitext", {
+            strings: ["Hi! My name is Dheeraj.", "How can I help you?"],
+            loop: true,
+            typeSpeed: 150,
+            backSpeed: 50,
+            backDelay: 1500
+        })
+    </script>
+
+
+    <!-- icon -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- icon -->
+</body>
+
+</html>
