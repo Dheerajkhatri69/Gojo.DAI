@@ -108,6 +108,7 @@ body{
     display: flex;
     z-index: 1;
     align-items: center;
+    justify-content: center;
     border-radius: 20px;
     background-color: #ffffff;
     width: 240px;
